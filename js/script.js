@@ -142,6 +142,3 @@ function purchaseBtnClicked () {
  }
   updateCartPrice()
 }
-// end of purchase items
-
-//alert user if cart is empty

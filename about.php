@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("connect.php");
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -32,7 +39,7 @@
   <header class="header_section innerpage_header">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="homepage.php">
           <span>
             GoGo
           </span>
@@ -47,9 +54,21 @@
             </button>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
+              <h1 style="color: aliceblue;">Salutare <?php 
+                                              if(isset($_SESSION['email'])){
+                                                  $email=$_SESSION['email'];
+                                                  $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                                                  while($row=mysqli_fetch_array($query)){
+                                                  echo $row['firstName'].' '.$row['lastName'];
+                                                  }
+                                              }
+                                              ?>
+                  </h1>
+                <br><br>
                 <a href="homepage.php">Acasă</a>
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
+                <br><br>
                 <a href="logout.php">Logout</a>
                 
               </div>

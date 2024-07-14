@@ -6,7 +6,7 @@
     <title>GoGo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="images/favicon.png" type="image/gif" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/login.css">
 </head>
 <body>
     <div class="container" id="signup" style="display:none;">
@@ -63,6 +63,6 @@
           <button id="signUpButton">Sign Up</button>
         </div>
       </div>
-      <script src="script.js"></script>
+      <script src="js/login.js"></script>
 </body>
 </html>

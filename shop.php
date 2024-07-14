@@ -1,3 +1,9 @@
+<?php
+session_start();
+include("connect.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +19,6 @@
   <link rel="stylesheet" href="css/style1.css" />
 	<!-- Demo CSS (No need to include it into your project) -->
 	<link rel="stylesheet" href="css/demo1.css">
-  
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -28,8 +33,22 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>  
+  .sort-btn {
+    background-color: #fd9c6b;
+    border-radius: 15px;
+    color: white;
+    padding: .6em 1em;  
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  margin-bottom: 10px; 
+  }
+</style>
 
 </head>
+
 
 <body>
 
@@ -37,7 +56,7 @@
   <header class="header_section innerpage_header">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg custom_nav-container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="homepage.php">
           <span>
             GoGo
           </span>
@@ -52,9 +71,21 @@
             </button>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
+              <h1 style="color: aliceblue;">Salutare <?php 
+                                              if(isset($_SESSION['email'])){
+                                                  $email=$_SESSION['email'];
+                                                  $query=mysqli_query($conn, "SELECT users.* FROM `users` WHERE users.email='$email'");
+                                                  while($row=mysqli_fetch_array($query)){
+                                                  echo $row['firstName'].' '.$row['lastName'];
+                                                  }
+                                              }
+                                              ?>
+                  </h1>
+                <br><br>
                 <a href="homepage.php">Acasă</a>
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
+                <br><br>
                 <a href="logout.php">Logout</a>
                 
               </div>
@@ -68,9 +99,8 @@
   <!-- end header section -->
 
   <!-- shop section -->
-  <main>
-    <!-- Start DEMO HTML (Use the following code into your project)-->
-    
+<main>
+    <!-- Start DEMO HTML (Use the following code into your project)-->    
 <div class="cart-modal-overlay">
    <div class="cart-modal">
     <br> <br> <br> <br> <br>
@@ -92,168 +122,121 @@
    <i id="cart" class="fas fa-shopping-cart"></i>
      <span class ="cart-quantity">0</span>
  </div>
-<!--  products  -->
-<section class="shop_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>
-        Produsele noastre
-      </h2>
+    <!-- Sort Button -->
+    <button class="sort-btn" id="openPopup">Sortează După Preț</button>
+
+    <!-- Popup for Sorting -->
+    <div id="popup" class="popup" style="display:none">
+        <div>
+            <button class="sort-btn" id="closePopup">Închide</button>
+            <button class="sort-btn" id="sort-low-to-high">Sortează de la mic la mare</button>
+            <button class="sort-btn" id="sort-high-to-low">Sortează de la mare la mic</button>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-sm-3 col-md-3 col-lg-4">
 
-        
-          
-          <div class="img-box card">
-            <img class="product-image" src="images/p1.png" alt="">
-            <button class="add-to-cart">Adaugă în coș</button>
-                <span class="product-price">10 Ron</span>
-            <div class="detail-box">
-              <h6 class="cart-name">
-                Gogoașă cu căpșuni
-              </h6>
-              
-            </div>
+<!-- Products Section -->
+<section class="shop_section layout_padding">
+  <div class="container" id="itemList">
+    <div class="heading_container heading_center">
+      <h2>Produsele noastre</h2>
+    </div>
+    <div class="row" id="productList">
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p1.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="10">10 Ron</span>
+          <div class="detail-box">
+            <h6 class="cart-name">Gogoașă cu căpșuni</h6>
           </div>
+        </div>
       </div>
-      <div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
           <img class="product-image" src="images/p2.png" alt="">
           <button class="add-to-cart">Adaugă în coș</button>
-              <span class="product-price">9 Ron</span>
+          <span class="product-price" data-price="9">9 Ron</span>
           <div class="detail-box">
-            <h6>
-              Gogoașă cu vanilie
-            </h6>
-            
+            <h6>Gogoașă cu vanilie</h6>
           </div>
         </div>
-    </div>
-    <div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-      <div class="img-box card">
-        <img class="product-image" src="images/p3.png" alt="">
-        <button class="add-to-cart">Adaugă în coș</button>
-            <span class="product-price">12 Ron</span>
-        <div class="detail-box">
-          <h6>
-            Gogoașă cu oreo
-          </h6>
-          
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p3.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="12">12 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu oreo</h6>
+          </div>
         </div>
       </div>
-  </div>
-  <div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-    <div class="img-box card">
-      <img class="product-image" src="images/p4.png" alt="">
-      <button class="add-to-cart">Adaugă în coș</button>
-          <span class="product-price">8 Ron</span>
-      <div class="detail-box">
-        <h6>
-          Gogoașă cu Bezele
-        </h6>
-        
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p4.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="8">8 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu Bezele</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p5.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="10">10 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu caramel</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p6.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="10">10 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu banane</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p7.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="9">9 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu cireșe</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p8.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="10">10 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă Simplă</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
+        <div class="img-box card">
+          <img class="product-image" src="images/p9.png" alt="">
+          <button class="add-to-cart">Adaugă în coș</button>
+          <span class="product-price" data-price="9">9 Ron</span>
+          <div class="detail-box">
+            <h6>Gogoașă cu vanilie</h6>
+          </div>
+        </div>
       </div>
     </div>
-</div>
-<div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-  <div class="img-box card">
-    <img class="product-image" src="images/p5.png" alt="">
-    <button class="add-to-cart">Adaugă în coș</button>
-        <span class="product-price">10 Ron</span>
-    <div class="detail-box">
-      <h6>
-        Gogoașă cu caramel
-      </h6>
-      
-    </div>
   </div>
-</div>
-<div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-  <div class="img-box card">
-    <img class="product-image" src="images/p6.png" alt="">
-    <button class="add-to-cart">Adaugă în coș</button>
-        <span class="product-price">10 Ron</span>
-    <div class="detail-box">
-      <h6>
-        Gogoașă cu banane
-      </h6>
-      
-    </div>
-  </div>
-</div>
-<div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-  <div class="img-box card">
-    <img class="product-image" src="images/p7.png" alt="">
-    <button class="add-to-cart">Adaugă în coș</button>
-        <span class="product-price">9 Ron</span>
-    <div class="detail-box">
-      <h6>
-        Gogoașă cu cireșe
-      </h6>
-      
-    </div>
-  </div>
-</div>
-<div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-  <div class="img-box card">
-    <img class="product-image" src="images/p8.png" alt="">
-    <button class="add-to-cart">Adaugă în coș</button>
-        <span class="product-price">10 Ron</span>
-    <div class="detail-box">
-      <h6>
-        Gogoașă Simplă
-      </h6>
-      
-    </div>
-  </div>
-  
-</div>
-<div class="col-sm-3 col-md-3 col-lg-4">
-
-        
-          
-  <div class="img-box card">
-    <img class="product-image" src="images/p9.png" alt="">
-    <button class="add-to-cart">Adaugă în coș</button>
-        <span class="product-price">9 Ron</span>
-    <div class="detail-box">
-      <h6>
-        Gogoașă cu vanilie
-      </h6>
-      
-    </div>
-  </div>
-</div>
-
 </section>
-    <!-- END EDMO HTML (Happy Coding!)-->
 </main>
- 
 
-
-  <!-- end shop section -->
+<!-- end shop section -->
 
   <!-- info section -->
   <section class="info_section layout_padding2">
@@ -334,7 +317,7 @@
   <!-- custom js -->
   <script src="js/custom.js"></script>
   <script src="js/script.js"></script>
-  
+  <script src="js/popup.js"></script>
 
 </body>
 
