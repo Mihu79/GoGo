@@ -33,19 +33,7 @@ include("connect.php");
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <style>  
-  .sort-btn {
-    background-color: #fd9c6b;
-    border-radius: 15px;
-    color: white;
-    padding: .6em 1em;  
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-  margin-bottom: 10px; 
-  }
-</style>
+  
 
 </head>
 
