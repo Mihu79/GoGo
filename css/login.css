@@ -9,8 +9,8 @@ body{
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(0,0,0,1) 100%);
+    background: #fd9c6b;
+    background: linear-gradient(0deg, #fd9c6b 0%, rgba(0,0,0,1) 70%);
     padding: 20px;
 }
 .container{
@@ -18,7 +18,7 @@ body{
     border: 1px solid rgb(255, 255, 255);
     width:450px;
     padding:1.5rem;
-    margin:50px auto;
+    margin:250px auto;
     border-radius:10px;
     box-shadow:0 20px 35px rgba(0,0,1,0.9);
 }
@@ -38,7 +38,7 @@ input{
     width:100%;
     background-color:transparent;
     border:none;
-    border-bottom:1px solid #ffffff;
+    border-bottom:1px solid rgb(34,193,195);
     padding-left:1.5rem;
     font-size:15px;
     color: white;
@@ -50,18 +50,18 @@ input{
 }
 .input-group i{
     position:absolute;
-    color:rgb(255, 255, 255);
+    color:rgb(34,193,195);
 }
 input:focus{
     background-color: transparent;
     outline:transparent;
-    border-bottom:2px solid hsl(0, 0%, 100%);
+    
 }
 input::placeholder{
     color:transparent;
 }
 label{
-    color:#ffffff;
+    color:rgb(34,193,195);
     position:relative;
     left:1.2em;
     top:-1.3em;
@@ -70,7 +70,7 @@ label{
 }
 input:focus~label,input:not(:placeholder-shown)~label{
     top:-3em;
-    color:hsl(0, 0%, 100%);
+    color:rgb(34,193,195);
     font-size:15px;
 }
 .recover{
@@ -107,19 +107,18 @@ input:focus~label,input:not(:placeholder-shown)~label{
     text-align:center;
 }
 .icons i{
-    color:rgb(255, 255, 255);
+    color:rgb(34,193,195);
     padding:0.8rem 1.5rem;
     border-radius:10px;
     font-size:1.5rem;
     cursor:pointer;
-    border:2px solid #dfe9f5;
     margin:0 15px;
     transition:1s;
 }
 .icons i:hover{
     background:transparent;
     font-size:1.6rem;
-    border:2px solid rgb(255, 255, 255);
+    border:2px solid rgb(34,193,195);
 }
 .links{
     display:flex;
