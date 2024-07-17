@@ -131,7 +131,7 @@ include("connect.php");
     <div class="row" id="productList">
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p1.png" alt="">
+          <a href="review1.php"><img class="product-image" src="images/p1.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="10">10 Ron</span>
           <div class="detail-box">
@@ -141,7 +141,7 @@ include("connect.php");
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p2.png" alt="">
+        <a href="review2.php"><img class="product-image" src="images/p2.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="9">9 Ron</span>
           <div class="detail-box">
