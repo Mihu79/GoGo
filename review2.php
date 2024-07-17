@@ -95,7 +95,7 @@ include("connect.php");
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                Lasă o Impresie
+              Gogoașă cu vanilie
               </h2>
             </div>
             <div class="rating-ystem">
@@ -106,7 +106,7 @@ include("connect.php");
             <span class="star" data-value="4">&#9733;</span>
             <span class="star" data-value="5">&#9733;</span>
         </div>
-        <textarea id="review" placeholder="Spune-ne părerea ta aici..."></textarea>
+        <textarea id="review" placeholder="Spune-ne părerea ta despre această gogoșă aici..."></textarea>
         <button id="postBtn">Post</button>
         <div class="reviews-container">
             <ul id="reviewsList"></ul>
