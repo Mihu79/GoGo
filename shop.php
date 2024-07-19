@@ -135,7 +135,7 @@ include("connect.php");
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="10">10 Ron</span>
           <div class="detail-box">
-            <h6 class="cart-name">Gogoașă cu căpșuni</h6>
+            <h6 class="product-name">Gogoașă cu căpșuni</h6>
           </div>
         </div>
       </div>
@@ -145,77 +145,77 @@ include("connect.php");
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="9">9 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu vanilie</h6>
+            <h6 class="product-name">Gogoașă cu vanilie</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p3.png" alt="">
+        <a href="review3.php"><img class="product-image" src="images/p3.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="12">12 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu oreo</h6>
+            <h6 class="product-name">Gogoașă cu oreo</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p4.png" alt="">
+        <a href="review4.php"><img class="product-image" src="images/p4.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="8">8 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu Bezele</h6>
+            <h6 class="product-name">Gogoașă cu Bezele</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p5.png" alt="">
+        <a href="review5.php"><img class="product-image" src="images/p5.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="10">10 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu caramel</h6>
+            <h6 class="product-name">Gogoașă cu caramel</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p6.png" alt="">
+        <a href="review6.php"><img class="product-image" src="images/p6.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="10">10 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu banane</h6>
+            <h6 class="product-name">Gogoașă cu banane</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p7.png" alt="">
+        <a href="review7.php"><img class="product-image" src="images/p7.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="9">9 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu cireșe</h6>
+            <h6 class="product-name">Gogoașă cu cireșe</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p8.png" alt="">
+        <a href="review8.php"><img class="product-image" src="images/p8.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="10">10 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă Simplă</h6>
+            <h6 class="product-name">Gogoașă Simplă</h6>
           </div>
         </div>
       </div>
       <div class="col-sm-3 col-md-3 col-lg-4" id="gogo">
         <div class="img-box card">
-          <img class="product-image" src="images/p9.png" alt="">
+        <a href="review9.php"><img class="product-image" src="images/p9.png" alt=""></a>
           <button class="add-to-cart">Adaugă în coș</button>
           <span class="product-price" data-price="9">9 Ron</span>
           <div class="detail-box">
-            <h6>Gogoașă cu vanilie</h6>
+            <h6 class="product-name">Gogoașă cu ciocolată</h6>
           </div>
         </div>
       </div>
