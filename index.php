@@ -1,68 +1,274 @@
+<?php
+session_start();
+include("connect.php");
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoGo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/gif" />
-    <link rel="stylesheet" href="CSS/login.css">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/favicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style1.css" />
+	<!-- Demo CSS (No need to include it into your project) -->
+	<link rel="stylesheet" href="css/demo1.css">
+
+  <title>GoGo</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
 </head>
+
 <body>
-    <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Register</h1>
-      <form method="post" action="register.php">
-        <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input type="text" name="fName" id="fName" placeholder="First Name" required>
-           <label for="fname">First Name</label>
+
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="homepage.php">
+          <span>
+            GoGo
+          </span>
+        </a>
+        <div class="" id="">
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="login.php">Log In</a>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="lName" id="lName" placeholder="Last Name" required>
-            <label for="lName">Last Name</label>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- slider section -->
+  <section class="slider_section position-relative">
+    <div class="slider_bg_box">
+      <img src="images/slider-bg.jpg" alt="">
+    </div>
+    <div class="slider_bg"></div>
+    <div class="container">
+      <div class="col-md-9 col-lg-8">
+        <div class="detail-box">
+          <h1>
+            Gogoșerie
+            
+          </h1>
+          <p>
+            Gogoșile sunt deserturi delicioase, prăjite în ulei și acoperite cu zahăr sau glazură. Ele sunt populare în întreaga lume pentru gustul lor dulce și textura pufoasă.
+          </p>
+          <div>
+            <a href="login.php" class="slider-link">
+              Log In
+            </a>
+          </div>
         </div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <label for="email">Email</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <label for="password">Password</label>
-        </div>
-       <input type="submit" class="btn" value="Sign Up" name="signUp">
-      </form>
-      
-      <div class="links">
-        <p>Already Have Account ?</p>
-        <button id="signInButton">Sign In</button>
       </div>
     </div>
+  </section>
+  <!-- end slider section -->
 
-    <div class="container" id="signIn">
-        <h1 class="form-title">Sign In</h1>
-        <form method="post" action="register.php">
-          <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="email" name="email" id="email" placeholder="Email" required>
-              <label for="email">Email</label>
-          </div>
-          <div class="input-group">
-              <i class="fas fa-lock"></i>
-              <input type="password" name="password" id="password" placeholder="Password" required>
-              <label for="password">Password</label>
-          </div>
-          
-         <input type="submit" class="btn" value="Sign In" name="signIn">
-        </form>
+  <!-- shop section -->
+
+  <section class="shop_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Produsele noastre
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-4">
+
         
-        <div class="links">
-          <p>Don't have account yet?</p>
-          <button id="signUpButton">Sign Up</button>
+          
+          <div class="img-box card">
+            <img class="product-image" src="images/p1.png" alt="">
+            
+                <span class="product-price">9 Ron</span>
+            <div class="detail-box">
+              <h6>
+                Gogoașă cu căpșuni
+              </h6>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-4">
+
+        
+          
+          <div class="img-box card">
+            <img class="product-image" src="images/p2.png" alt="">
+            
+                <span class="product-price">9 Ron</span>
+            <div class="detail-box">
+              <h6>
+                Gogoașă cu vanilie
+              </h6>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-4">
+
+        
+          
+          <div class="img-box card">
+            <img class="product-image" src="images/p3.png" alt="">
+            
+                <span class="product-price">9 Ron</span>
+            <div class="detail-box">
+              <h6>
+                Gogoașă cu oreo
+              </h6>
+              
+            </div>
+          </div>
+        </div>
+        
+
+        
+          
+         
+  <div class="container">   
+    <div class="btn-box">
+        <a href="login.php">
+          Pentru a vedea toate produsele vă rugăm să intrați in cont        
+        </a>
+    </div>
+  </div>   
+      </div>
+  </section>
+
+  <!-- end shop section -->
+
+  <!-- about section -->
+
+  <section class="about_section  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Despre Gogoși
+              </h2>
+            </div>
+            <p>
+              Gogoșile, sau "doughnuts" în limba engleză, sunt deserturi coapte sau prăjite, preparate din aluat dospit, iar apoi acoperite cu diverse arome, precum ciocolată, vanilie sau scortisoară. Aceste delicii sunt adorate în special la micul dejun sau în pauzele dulci.
+            </p>
+            
+          </div>
         </div>
       </div>
-      <script src="js/login.js"></script>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row info_form_social_row">
+        <div class="col-md-8 col-lg-9">
+          <div class="info_form">
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+
+          <div class="social_box">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+       
+        
+        <div class="col-md-7 col-lg-3">
+          <h4>
+            Contact
+          </h4>
+          <div class="info_contact">
+            <a href="https://maps.app.goo.gl/De33Sxx49nCMPuVv6">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Locația
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Sunați la +035177243
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope"></i>
+              <span>
+                gogo@gmail.com
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
 </body>
+
 </html>

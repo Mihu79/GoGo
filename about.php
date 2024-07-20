@@ -69,7 +69,7 @@ include("connect.php");
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
                 <br><br>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php">Log Out</a>
                 
               </div>
             </div>
@@ -147,7 +147,7 @@ include("connect.php");
                 <a href="homepage.php">Acasă</a>
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php">Log Out</a>
              
             </div>
           </div>

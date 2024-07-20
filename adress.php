@@ -30,7 +30,7 @@ include("connect.php");
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <link href="css/review.css" rel="stylesheet" />
+  <link href="css/style1.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -83,42 +83,25 @@ include("connect.php");
 
   <!-- about section -->
 
-  <section class="about_section  layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/p8.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-              Gogoașă Simplă
-              </h2>
-            </div>
-            <div class="rating-ystem">
-        <div class="stars">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
-        </div>
-        <textarea id="review" placeholder="Spune-ne părerea ta despre această gogoșă aici..."></textarea>
-        <button id="postBtn">Post</button>
-        <div class="reviews-container">
-            <ul id="reviewsList"></ul>
-        </div>
+  <div class="form-container">
+    <h2>Confirmare Comandă</h2>
+    <form id="orderForm">
+    <div class="form-group">
+      <label for="city">Oraș</label>
+      <input type="text" id="city" name="city" required>
     </div>
-
-            
-          </div>
-        </div>
-      </div>
+    <div class="form-group">
+      <label for="county">Județ</label>
+      <input type="text" id="county" name="county" required>
     </div>
-  </section>
+    <div class="form-group">
+      <label for="address">Adresa</label>
+      <input type="text" id="address" name="address" required>
+    </div>
+    <button class="submit-btn" onclick="confirmOrder()">Confirmă Comanda</button>
+    </form>
+  </div>
+  
 
   <!-- end about section -->
   <br>
@@ -205,7 +188,7 @@ include("connect.php");
   <script src="js/bootstrap.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <script src="js/review/review8.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

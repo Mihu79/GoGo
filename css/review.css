@@ -49,7 +49,7 @@ textarea {
 #postBtn {
     padding: 10px 20px;
     border: none;
-    background-color: #28a745;
+    background-color: #fd9c6b;
     color: #fff;
     font-size: 16px;
     border-radius: 4px;
@@ -57,7 +57,7 @@ textarea {
 }
 
 #postBtn:hover {
-    background-color: #218838;
+    background-color: #e07b49;
 }
 
 .reviews-container {

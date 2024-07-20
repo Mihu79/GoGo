@@ -209,6 +209,75 @@ img {
   transform: translateY(5px);
 }
 
+/* Promo code section styling */
+.promo-code-section {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.promo-code-section input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.promo-code-section button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.promo-code-section button:hover {
+  background-color: #0056b3;
+}
+
+#discount-message {
+  margin-left: 10px;
+  font-weight: bold;
+  color: green;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container h2 {
+  text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #fd9c6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #e07b49;
+}
+
 @media (max-width: 1000px){
   .cart-modal {
     width: 100vw;

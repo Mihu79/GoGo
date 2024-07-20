@@ -74,7 +74,7 @@ include("connect.php");
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
                 <br><br>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php">Log Out</a>
                 
               </div>
             </div>
@@ -101,7 +101,14 @@ include("connect.php");
          <h1 class="cart-total">TOTAL</h1>
            <span class="total-price">0 Ron</span>
              <button class="purchase-btn">Cumpară</button>
-       </div>
+        </div>
+        <!-- Promo code input and apply button -->
+        <div class="promo-code-section">
+            <input type="text" id="promo-code" placeholder="Enter promo code">
+            <button id="apply-promo">Aplică Promo Code</button>
+            <span id="discount-message"></span>
+            </div>
+
      </div>
 </div>
      
@@ -260,7 +267,7 @@ include("connect.php");
                 <a href="homepage.php">Acasă</a>
                 <a href="about.php">Despre Noi</a>
                 <a href="shop.php">Magazin</a>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php">Log Out</a>
               
             </div>
           </div>
