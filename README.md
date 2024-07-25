@@ -30,4 +30,4 @@ Acest proiect constă într-un website creat pentru un magazin de gogoși, care 
    Proiectul fără partea de logare și înregistrare poate fii vazut la următorul link:
    
    ```bash
-     https://mmportofolio.netlify.app/assets/projects/gogo%20proiect/
+   https://mmportofolio.netlify.app/assets/projects/gogo%20proiect/
