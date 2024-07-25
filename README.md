@@ -20,7 +20,7 @@ Acest proiect constă într-un website creat pentru un magazin de gogoși, care 
 
 ## Instalare
 
-   Clonează repository-ul:
+1. Clonează repository-ul:
 
    ```bash
    git clone https://github.com/Mihu79/GoGo.git
