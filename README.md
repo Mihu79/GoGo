@@ -24,3 +24,10 @@ Acest proiect constă într-un website creat pentru un magazin de gogoși, care 
 
    ```bash
    git clone https://github.com/Mihu79/GoGo.git
+
+## Vizualizarea Proiectului 
+
+   Proiectul fără partea de logare și înregistrare poate fii vazut la următorul link:
+   
+   ```bash
+     https://mmportofolio.netlify.app/assets/projects/gogo%20proiect/
